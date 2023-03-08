@@ -63,10 +63,10 @@
         admin_username: "{{ vm_username }}"
         admin_password: "{{ vm_password }}"
         image:
-          offer: "CentOS"
-          publisher: "OpenLogic"
-          sku: "7.5"
-          version: "latest"
+          offer: "{{ offer }}"
+          publisher: "{{ publisher }}"
+          sku: "{{ sku }}"
+          version: "{{ version }}"
         os_disk_caching: ReadWrite
         os_disk_name: "{{ vm_name }}-os-disk"
         network_interface_names:
