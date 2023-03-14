@@ -16,3 +16,7 @@
             rule_desc: "allow all on port 80"
       register: security_group
     
+    - name: "Artifact the Security Group var"
+      ansible.builtin.set_stats:
+        data:
+          security_group: "{{security_group}}"
