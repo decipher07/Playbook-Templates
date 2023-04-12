@@ -1,0 +1,14 @@
+- name: Restart VM on Azure
+  hosts: localhost
+  tasks:
+    - name: Restart VM
+      azure_rm_virtualmachine:
+        resource_group: restart-rg
+        name: Test-VM-Deepankar
+        state: present
+        restarted: true
+      register: result
+
+    - name: Display result
+      debug:
+        var: result
